@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("clone") {
             steps {
-                git url: 'https://github.com/tejesh555/applogin.git'
+                git url: 'https://github.com/rawi24/applogin.git'
             }
         }
         stage ("build") {
@@ -42,7 +42,7 @@ pipeline {
                     sh "mkdir ansible"
                     dir('ansible') {
                         sh "pwd"
-                        git url: 'https://github.com/tejesh555/ansible2.git'
+                        git url: 'https://github.com/rawi24/ansible2.git'
                     }
                     sh "ansible-playbook -i ansible/host ansible/e2e.yml"
                 }
