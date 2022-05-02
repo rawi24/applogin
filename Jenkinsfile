@@ -1,4 +1,5 @@
 pipeline {
+    
     agent {label 'ansible'}
     stages {
         stage ("clone") {
